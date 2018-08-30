@@ -1,10 +1,9 @@
 import * as React from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { Router, Switch, Route } from 'react-router-dom'
-import { Container } from 'semantic-ui-react'
 import { history } from '../Utils/history'
+import ResponsiveContainer from '../Components/ResponsiveContainer/responsiveContainer'
 import HomePage from '../Pages/HomePage/homePage'
+import ContactPage from '../Pages/ContactPage/contactPage'
 import './App.css'
 
 
@@ -17,15 +16,14 @@ class App extends React.Component {
 	render() {
 		return (
 			<Router history={ history }>
-				<Container fluid style={ { height: '100%' } }>
+				<ResponsiveContainer style={{ height: '100%', width: '100%' }} >
 					<Switch >
 						<Route exact={ true } path='/' component={ HomePage } />
+						<Route exact={ true } path='/contato' component={ ContactPage } />
 					</Switch>
-				</Container>
+				</ResponsiveContainer>
 			</Router>
 		)
 	}
 }
-const mapStateToProps = (state) => ({ })
-const mapDispatchToProps = (dispatch) => bindActionCreators({ }, dispatch)
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default App

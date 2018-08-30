@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Button, Container, Header, Icon, Responsive, Segment } from 'semantic-ui-react'
+import {Button, Container, Header, Icon, Responsive, Segment} from 'semantic-ui-react'
 
 
-class HomePage extends Component {
+class ContactPage extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {}
@@ -12,7 +12,7 @@ class HomePage extends Component {
 		const mobile = window.innerWidth <= Responsive.onlyMobile.maxWidth
 		return (
 			<Container fluid >
-				<Segment className='segment-image' basic inverted textAlign='center' >
+				<Segment basic inverted textAlign='center' className='segment-image' >
 					<Header
 						as='h1'
 						content='Minha cidadania'
@@ -35,7 +35,7 @@ class HomePage extends Component {
 							marginBottom: mobile ? '3em' : '5em',
 						}}
 					/>
-					<Button color='red' size='huge' style={{ marginBottom: '2em' }}>
+					<Button color='blue' size='huge' style={{ marginBottom: '2em' }}>
 						Entre em contato
 						<Icon name='right arrow' />
 					</Button>
@@ -45,4 +45,4 @@ class HomePage extends Component {
 	}
 }
 
-export default HomePage
+export default ContactPage

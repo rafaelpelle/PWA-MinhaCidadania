@@ -39,3 +39,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     margin-right: 0 !important;
   }
 }
+
+.segment-image {
+  background: linear-gradient(rgba(27, 27, 27, 1), rgba(27, 27, 27, 0.8)), url('../assets/images/italy.jpg') !important;
+  background-size: cover !important;
+}
