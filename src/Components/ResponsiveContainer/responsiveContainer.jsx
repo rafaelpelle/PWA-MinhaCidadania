@@ -16,14 +16,19 @@ class ResponsiveContainer extends Component {
 }
 
 class DesktopContainer extends Component {
-	state = {}
+	constructor(props) {
+		super(props)
+		this.state = { fixed: false, homeActive: true, contactActive: false }
+	}
 
-	hideFixedMenu = () => this.setState({ fixed: false })
-	showFixedMenu = () => this.setState({ fixed: true })
+	hideFixedMenu = () => this.setState({ ...this.state, fixed: false })
+	showFixedMenu = () => this.setState({ ...this.state, fixed: true })
+	switchToHome = () => this.setState({ ...this.state, homeActive: true, contactActive: false })
+	switchToContact = () => this.setState({ ...this.state, homeActive: false, contactActive: true })
 
 	render() {
 		const { children } = this.props
-		const { fixed } = this.state
+		const { fixed, homeActive, contactActive } = this.state
 		return (
 			<Responsive minWidth={Responsive.onlyTablet.minWidth}>
 				<Visibility
@@ -45,8 +50,12 @@ class DesktopContainer extends Component {
 							size='large'
 						>
 							<Container>
-								<Menu.Item as={ Link } to='/' active>Home</Menu.Item>
-								<Menu.Item as={ Link } to='/contato' >Contato</Menu.Item>
+								<Menu.Item as={ Link } to='/' >
+									Home
+								</Menu.Item>
+								<Menu.Item as={ Link } to='/contato' >
+									Contato
+								</Menu.Item>
 							</Container>
 						</Menu>
 					</Segment>
