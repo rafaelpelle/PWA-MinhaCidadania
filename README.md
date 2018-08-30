@@ -3,5 +3,5 @@
 Projeto de um PWA para divulgação de serviços sobre dupla cidadania.<br/><br/>
 Implementado utilizando:
 - React
-- JavaScript
+- Javascript
 - Semantic UI
