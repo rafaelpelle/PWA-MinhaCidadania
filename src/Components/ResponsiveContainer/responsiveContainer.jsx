@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Icon, Menu, Responsive, Segment, Sidebar, Visibility } from 'semantic-ui-react'
-
+import Footer from '../Footer/footer'
 
 class ResponsiveContainer extends Component {
 	render() {
@@ -61,6 +61,7 @@ class DesktopContainer extends Component {
 					</Segment>
 				</Visibility>
 				{children}
+				<Footer />
 			</Responsive>
 		)
 	}
@@ -72,7 +73,6 @@ class MobileContainer extends Component {
 
 	handlePusherClick = () => {
 		const { sidebarOpened } = this.state
-
 		if (sidebarOpened) this.setState({ sidebarOpened: false })
 	}
 
@@ -84,9 +84,9 @@ class MobileContainer extends Component {
 		return (
 			<Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
 				<Sidebar.Pushable>
-					<Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
-						<Menu.Item as={Link} to='/' >Home</Menu.Item>
-						<Menu.Item as={Link} to='/contato' >Contato</Menu.Item>
+					<Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened} style={{paddingTop: '2em'}}>
+						<Menu.Item as={Link} to='/' onClick={this.handlePusherClick} >Home</Menu.Item>
+						<Menu.Item as={Link} to='/contato' onClick={this.handlePusherClick} >Contato</Menu.Item>
 					</Sidebar>
 
 					<Sidebar.Pusher
@@ -109,6 +109,7 @@ class MobileContainer extends Component {
 							</Container>
 						</Segment>
 						{children}
+						<Footer />
 					</Sidebar.Pusher>
 				</Sidebar.Pushable>
 			</Responsive>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Container, Header, Icon, Responsive, Segment } from 'semantic-ui-react'
 
+const segmentStyle = { marginTop: '0em', padding: '1em' }
 
 class HomePage extends Component {
 	constructor(props) {
@@ -11,8 +12,8 @@ class HomePage extends Component {
 	render() {
 		const mobile = window.innerWidth <= Responsive.onlyMobile.maxWidth
 		return (
-			<Container fluid >
-				<Segment className='segment-image' basic inverted textAlign='center' >
+			<Segment className='segment-image' basic inverted textAlign='center' style={ segmentStyle } >
+				<Container >
 					<Header
 						as='h1'
 						content='Minha cidadania'
@@ -39,8 +40,8 @@ class HomePage extends Component {
 						Entre em contato
 						<Icon name='right arrow' />
 					</Button>
-				</Segment>
-			</Container>
+				</Container>
+			</Segment>
 		)
 	}
 }
