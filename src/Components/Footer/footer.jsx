@@ -14,7 +14,7 @@ export default class Footer extends Component {
 	render() {
 		return(
 			<Grid style={containerStyle} >
-				<Grid.Column width={ 5 } floated='left' >
+				<Grid.Column width={ 5 } floated='left' style={{ marginLeft: '7em' }} >
 					<Map />
 				</Grid.Column>
 				<Grid.Column  width={ 6 } floated='right' verticalAlign='middle' >

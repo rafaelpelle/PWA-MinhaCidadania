@@ -5,6 +5,7 @@ import ResponsiveContainer from '../Components/ResponsiveContainer/responsiveCon
 import HomePage from '../Pages/HomePage/homePage'
 import ContactPage from '../Pages/ContactPage/contactPage'
 import './App.css'
+import Footer from "../Components/Footer/footer";
 
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
 						<Route exact={ true } path='/' component={ HomePage } />
 						<Route exact={ true } path='/contato' component={ ContactPage } />
 					</Switch>
+					<Footer />
 				</ResponsiveContainer>
 			</Router>
 		)
