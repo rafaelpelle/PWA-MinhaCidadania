@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Container, Header, Icon, Responsive, Segment } from 'semantic-ui-react'
+import {Link} from "react-router-dom";
 
 const mobile = window.innerWidth <= Responsive.onlyMobile.maxWidth
 const segmentStyle = { marginTop: '0em', padding: '1em' }
@@ -29,9 +30,11 @@ class HomePageCover extends Component {
 						inverted
 						style={ subHeaderStyle }
 					/>
-					<Button color='red' size='huge' style={ marginBottom1 }>
-						Entre em contato
-						<Icon name='right arrow' />
+					<Button as={ Link } to='/contato' animated='fade' color='red' size='huge' style={ marginBottom1 } >
+						<Button.Content visible>Entre em contato</Button.Content>
+						<Button.Content hidden>
+							<Icon name='phone' />
+						</Button.Content>
 					</Button>
 				</Container>
 			</Segment>

@@ -36,6 +36,11 @@ pids
 
 # production build
 /dist
+/build
+
+# now credentials
+/now/
+/.now/
 
 #IDE settings
 .idea/

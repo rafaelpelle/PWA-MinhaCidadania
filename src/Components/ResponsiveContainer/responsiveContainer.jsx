@@ -25,7 +25,7 @@ class DesktopContainer extends Component {
 
 	render() {
 		const { children } = this.props
-		const { fixed, homeActive, contactActive } = this.state
+		const { fixed } = this.state
 		return (
 			<Responsive minWidth={Responsive.onlyTablet.minWidth}>
 				<Visibility

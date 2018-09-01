@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { Header, Grid } from 'semantic-ui-react'
-import Map from './map'
+import { darkGrey } from "../../Utils/defaultColors";
+import Map from '../Map/map'
 
-const containerStyle = { marginTop: '2em', padding: '2em', backgroundColor: '#1b1c1d' }
-const marginTopHalf = { marginTop: '1.5em' }
+const containerStyle = { marginTop: '2em', padding: '2em', backgroundColor: darkGrey }
+const subHeaderStyle = { marginTop: '1.5em', fontSize: '1em' }
+const lowerCase = { textTransform: 'none' }
 
 export default class Footer extends Component {
 	render() {
@@ -14,11 +16,10 @@ export default class Footer extends Component {
 				</Grid.Column>
 				<Grid.Column  width={ 6 } floated='right' verticalAlign='middle' >
 					<Header as='h1' inverted content={'Onde estamos'} />
-					<Header sub inverted content={'Rua General Bittencourt, 386 - Centro'} style={marginTopHalf} />
-					<Header sub inverted content={'Florianópolis - SC - Brasil'} style={marginTopHalf} />
-					<Header sub inverted content={'Tel: (48)99912-9455'} style={marginTopHalf} />
-					<Header sub inverted content={'E-mail: minhacidadania.contato@gmail.com'} style={marginTopHalf} />
-
+					<Header sub inverted content={'Rua General Bittencourt, 386 - Centro'} style={ subHeaderStyle } />
+					<Header sub inverted content={'Florianópolis - SC - Brasil'} style={ subHeaderStyle } />
+					<Header sub inverted content='TEL: (48) 99912-9455' style={ subHeaderStyle } />
+					<Header sub inverted content={'E-MAIL: minhacidadania.contato@gmail.com'} style={{ ...subHeaderStyle, ...lowerCase }} />
 				</Grid.Column>
 			</Grid>
 		)
