@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Icon, Menu, Responsive, Segment, Sidebar, Visibility } from 'semantic-ui-react'
-import Footer from '../Footer/footer'
 
 class ResponsiveContainer extends Component {
 	render() {
@@ -23,8 +22,6 @@ class DesktopContainer extends Component {
 
 	hideFixedMenu = () => this.setState({ ...this.state, fixed: false })
 	showFixedMenu = () => this.setState({ ...this.state, fixed: true })
-	switchToHome = () => this.setState({ ...this.state, homeActive: true, contactActive: false })
-	switchToContact = () => this.setState({ ...this.state, homeActive: false, contactActive: true })
 
 	render() {
 		const { children } = this.props

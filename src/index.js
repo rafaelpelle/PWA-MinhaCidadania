@@ -6,7 +6,7 @@ import './index.css';
 import App from './Main/App';
 import reducers from './Main/reducers'
 import registerServiceWorker from './registerServiceWorker'
-import './Semantic/semantic.min.css'
+import './dist/semantic.min.css'
 
 const devTools = (window).__REDUX_DEVTOOLS_EXTENSION__ && (window).__REDUX_DEVTOOLS_EXTENSION__()
 
