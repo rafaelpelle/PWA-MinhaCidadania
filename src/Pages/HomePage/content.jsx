@@ -6,7 +6,7 @@ const containerStyle = { padding: '5em 1em' }
 const headerStyle = { fontSize: '2em', textTransform: 'uppercase' }
 const fontStyle = { fontSize: '1.33em', fontWeight: '300' }
 const marginBottom5Top5 = { marginBottom: '5em', marginTop: '5em' }
-const buttonStyle = { marginBottom: '1em', marginTop: '2em', backgroundColor: '#009900'  }
+const buttonStyle = { marginBottom: '1em', marginTop: '2em' }
 
 class HomePageContent extends Component {
 	constructor(props) {
