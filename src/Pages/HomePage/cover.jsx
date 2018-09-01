@@ -26,7 +26,7 @@ class ContactCover extends Component {
 						style={ headerStyle }
 					/>
 					<Header
-						content='Assesoria completa para o reconhecimento de cidadania italiana e portuguesa.'
+						content='Assessoria completa para o reconhecimento de cidadania italiana e portuguesa.'
 						inverted
 						style={ subHeaderStyle }
 					/>
