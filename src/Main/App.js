@@ -12,11 +12,15 @@ class App extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {}
+		history.listen((location, action) => {
+			document.body.scrollTop = 0 // For Safari
+			document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
+		})
 	}
 
 	render() {
 		return (
-			<Router history={ history }>
+			<Router history={ history } >
 				<ResponsiveContainer style={{ height: '100%', width: '100%' }} >
 					<Switch >
 						<Route exact={ true } path='/' component={ HomePage } />
