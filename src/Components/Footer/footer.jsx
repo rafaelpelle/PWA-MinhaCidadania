@@ -2,12 +2,7 @@ import React, { Component } from 'react'
 import { Header, Grid } from 'semantic-ui-react'
 import Map from './map'
 
-const containerStyle = {
-	marginTop: '2em',
-	padding: '2em',
-	backgroundColor: '#1b1c1d'
-}
-
+const containerStyle = { marginTop: '2em', padding: '2em', backgroundColor: '#1b1c1d' }
 const marginTopHalf = { marginTop: '1.5em' }
 
 export default class Footer extends Component {
