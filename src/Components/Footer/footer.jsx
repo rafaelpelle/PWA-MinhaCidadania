@@ -8,7 +8,7 @@ const marginTopHalf = { marginTop: '1.5em' }
 export default class Footer extends Component {
 	render() {
 		return(
-			<Grid style={containerStyle} >
+			<Grid style={containerStyle} stackable >
 				<Grid.Column width={ 5 } floated='left' style={{ marginLeft: '7em' }} >
 					<Map />
 				</Grid.Column>

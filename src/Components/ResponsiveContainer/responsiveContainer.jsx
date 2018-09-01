@@ -109,7 +109,6 @@ class MobileContainer extends Component {
 							</Container>
 						</Segment>
 						{children}
-						<Footer />
 					</Sidebar.Pusher>
 				</Sidebar.Pushable>
 			</Responsive>
