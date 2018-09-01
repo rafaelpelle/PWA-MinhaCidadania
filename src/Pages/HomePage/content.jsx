@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Container, Header, Divider, Segment, Icon, Button} from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 const containerStyle = { padding: '5em 1em' }
 const headerStyle = { fontSize: '2em', textTransform: 'uppercase' }
@@ -28,7 +29,7 @@ class HomePageContent extends Component {
 						Nossa página ainda está em construção. Para saber todos os documentos necessários e outras
 						informações detalhadas, entre em contato.
 					</Header>
-					<Button animated='fade' color='green' size='huge' style={ buttonStyle } >
+					<Button as={ Link } to='/contato' animated='fade' color='green' size='huge' style={ buttonStyle } >
 						<Button.Content visible>Entre em contato</Button.Content>
 						<Button.Content hidden>
 							<Icon name='phone' />
