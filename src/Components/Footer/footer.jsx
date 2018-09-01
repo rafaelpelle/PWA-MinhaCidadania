@@ -1,17 +1,24 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Header, Grid, Responsive } from 'semantic-ui-react'
 import { darkGrey } from "../../Utils/defaultColors";
 import Map from '../Map/map'
 
-const containerStyle = { marginTop: '2em', padding: '2em', backgroundColor: darkGrey }
-const subHeaderStyle = { marginTop: '1.5em', fontSize: '1em', textTransform: 'none' }
-const containerMobileStyle = { marginTop: '2em', padding: '1em', backgroundColor: darkGrey }
-const subHeaderMobileStyle = { marginTop: '1em', fontSize: '1em', textTransform: 'none' }
-const headerMobileStyle = { marginBottom: '1em' }
+const isMobile = window.innerWidth <= Responsive.onlyMobile.maxWidth
+const headerStyle = { marginBottom: '1em' }
+const containerStyle = {
+	marginTop: '2em',
+	padding: isMobile ? '1em' : '2em',
+	backgroundColor: darkGrey
+}
+const subHeaderStyle = {
+	marginTop: isMobile ? '1em' : '1.5em',
+	fontSize: '1em',
+	textTransform: 'none'
+}
 
-export default class Footer extends Component {
+export default class Footer extends React.Component {
 	render() {
-		return(
+		return (
 			<div>
 				<DesktopFooter />
 				<MobileFooter />
@@ -39,13 +46,13 @@ const DesktopFooter = () => (
 
 const MobileFooter = () => (
 	<Responsive maxWidth={Responsive.onlyMobile.maxWidth} >
-		<Grid columns={2} stackable style={ containerMobileStyle }  >
+		<Grid columns={ 2}  stackable style={ containerStyle }  >
 			<Grid.Column floated='right' verticalAlign='middle' >
-				<Header as='h1' inverted content={'ONDE ESTAMOS'} textAlign='center' style={ headerMobileStyle } />
-				<Header sub inverted content={'Rua General Bittencourt, 386 - Centro'} style={ subHeaderMobileStyle } />
-				<Header sub inverted content={'Florianópolis - SC - Brasil'} style={ subHeaderMobileStyle } />
-				<Header sub inverted content='TEL: (48) 99912-9455' style={ subHeaderMobileStyle } />
-				<Header sub inverted content={'E-MAIL: minhacidadania.contato@gmail.com'} style={ subHeaderMobileStyle } />
+				<Header as='h1' inverted content={'ONDE ESTAMOS'} textAlign='center' style={ headerStyle } />
+				<Header sub inverted content={'Rua General Bittencourt, 386 - Centro'} style={ subHeaderStyle } />
+				<Header sub inverted content={'Florianópolis - SC - Brasil'} style={ subHeaderStyle } />
+				<Header sub inverted content='TEL: (48) 99912-9455' style={ subHeaderStyle } />
+				<Header sub inverted content={'E-MAIL: minhacidadania.contato@gmail.com'} style={ subHeaderStyle } />
 			</Grid.Column>
 			<Grid.Column floated='left' style={{ marginLeft: '7em' }} >
 				<Map />
