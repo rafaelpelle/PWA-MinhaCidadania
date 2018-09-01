@@ -16,13 +16,13 @@ class HomePage extends Component {
 				<Container >
 					<Header
 						as='h1'
-						content='Minha cidadania'
+						content='Minha Cidadania'
 						inverted
 						style={{
 							fontSize: mobile ? '2em' : '4em',
 							fontWeight: 'bold',
 							marginBottom: 0,
-							marginTop: '1.5em',
+							marginTop: '1em',
 						}}
 					/>
 					<Header
@@ -31,12 +31,12 @@ class HomePage extends Component {
 						inverted
 						style={{
 							fontSize: mobile ? '1.2em' : '1.5em',
-							fontWeight: 'normal',
-							marginTop: mobile ? '1em' : '1.5em',
-							marginBottom: mobile ? '3em' : '5em',
+							fontWeight: 'bold',
+							marginTop: mobile ? '1em' : '1em',
+							marginBottom: mobile ? '2em' : '3em',
 						}}
 					/>
-					<Button color='red' size='huge' style={{ marginBottom: '2em' }}>
+					<Button color='red' size='huge' style={{ marginBottom: '1em' }}>
 						Entre em contato
 						<Icon name='right arrow' />
 					</Button>
