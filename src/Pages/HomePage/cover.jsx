@@ -8,7 +8,7 @@ const headerStyle = { fontSize: mobile ? '2em' : '4em', fontWeight: 'bold', marg
 const subHeaderStyle = { fontSize: mobile ? '1.2em' : '1.7em', fontWeight: 'bold', marginTop: '1em', marginBottom: '3em' }
 const marginBottom1 = { marginBottom: '1em' }
 
-class HomePageCover extends Component {
+class ContactCover extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {}
@@ -42,4 +42,4 @@ class HomePageCover extends Component {
 	}
 }
 
-export default HomePageCover
+export default ContactCover

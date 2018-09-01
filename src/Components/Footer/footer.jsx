@@ -4,7 +4,6 @@ import { darkGrey } from "../../Utils/defaultColors";
 import Map from '../Map/map'
 
 const isMobile = window.innerWidth <= Responsive.onlyMobile.maxWidth
-const headerStyle = { marginBottom: '1em' }
 const containerStyle = {
 	marginTop: '2em',
 	padding: isMobile ? '1em' : '2em',
@@ -15,6 +14,7 @@ const subHeaderStyle = {
 	fontSize: '1em',
 	textTransform: 'none'
 }
+const headerStyle = { marginBottom: '1.5em' }
 
 export default class Footer extends React.Component {
 	render() {
@@ -34,7 +34,7 @@ const DesktopFooter = () => (
 				<Map />
 			</Grid.Column>
 			<Grid.Column  width={ 6 } floated='right' verticalAlign='middle' >
-				<Header as='h1' inverted content={'ONDE ESTAMOS'} />
+				<Header as='h1' inverted content={'ONDE ESTAMOS'} style={ headerStyle } />
 				<Header sub inverted content={'RUA GENERAL BITTENCOURT, 386 - CENTRO'} style={ subHeaderStyle } />
 				<Header sub inverted content={'FLORIANÓPOLIS - SC - BRASIL'} style={ subHeaderStyle } />
 				<Header sub inverted content='TEL: (48) 99912-9455' style={ subHeaderStyle } />
@@ -46,7 +46,7 @@ const DesktopFooter = () => (
 
 const MobileFooter = () => (
 	<Responsive maxWidth={Responsive.onlyMobile.maxWidth} >
-		<Grid columns={ 2}  stackable style={ containerStyle }  >
+		<Grid columns={ 2 }  stackable style={ containerStyle }  >
 			<Grid.Column floated='right' verticalAlign='middle' >
 				<Header as='h1' inverted content={'ONDE ESTAMOS'} textAlign='center' style={ headerStyle } />
 				<Header sub inverted content={'Rua General Bittencourt, 386 - Centro'} style={ subHeaderStyle } />
