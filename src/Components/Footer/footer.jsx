@@ -8,6 +8,8 @@ const containerStyle = {
 	backgroundColor: '#1b1c1d'
 }
 
+const marginTopHalf = { marginTop: '1.5em' }
+
 export default class Footer extends Component {
 	render() {
 		return(
@@ -16,11 +18,11 @@ export default class Footer extends Component {
 					<Map />
 				</Grid.Column>
 				<Grid.Column  width={ 6 } floated='right' verticalAlign='middle' >
-					<Header as='h2' inverted content={'Onde estamos'} />
-					<Header sub inverted content={'Rua General Bittencourt, 386 - Centro'} />
-					<Header sub inverted content={'Florianópolis - SC - Brasil'} />
-					<Header sub inverted content={'Tel: (48)1234-5678'} />
-					<Header sub inverted content={'E-mail: minhacidadania.contato@gmail.com'} />
+					<Header as='h1' inverted content={'Onde estamos'} />
+					<Header sub inverted content={'Rua General Bittencourt, 386 - Centro'} style={marginTopHalf} />
+					<Header sub inverted content={'Florianópolis - SC - Brasil'} style={marginTopHalf} />
+					<Header sub inverted content={'Tel: (48)99912-9455'} style={marginTopHalf} />
+					<Header sub inverted content={'E-mail: minhacidadania.contato@gmail.com'} style={marginTopHalf} />
 
 				</Grid.Column>
 			</Grid>
