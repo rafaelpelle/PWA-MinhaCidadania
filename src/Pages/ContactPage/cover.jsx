@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { Container, Header, Responsive, Segment } from 'semantic-ui-react'
 
 const isMobile = window.innerWidth <= Responsive.onlyMobile.maxWidth
-const segmentStyle = { marginTop: '0em', padding: '1em' }
+const segmentStyle = { marginTop: '0em', padding: '3em 1em' }
 const headerStyle = {
-	fontSize: isMobile ? '2.5em' : '4em',
+	fontSize: '4em',
 	fontWeight: 'bold',
-	marginBottom: isMobile ? '2em' : '3em',
-	marginTop: '1em'
+	marginBottom: '0.5em',
+	textTransform: 'uppercase'
 }
 
 class HomePageCover extends Component {
@@ -23,7 +23,7 @@ class HomePageCover extends Component {
 				<Container >
 					<Header
 						as='h1'
-						content='Entre em Contato'
+						content='CONTATO'
 						inverted
 						style={ headerStyle }
 					/>

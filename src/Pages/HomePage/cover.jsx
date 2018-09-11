@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
 import { Button, Container, Header, Icon, Responsive, Segment } from 'semantic-ui-react'
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const mobile = window.innerWidth <= Responsive.onlyMobile.maxWidth
-const segmentStyle = { marginTop: '0em', padding: '1em' }
-const headerStyle = { fontSize: mobile ? '2em' : '4em', fontWeight: 'bold', marginBottom: 0, marginTop: '1em' }
-const subHeaderStyle = { fontSize: mobile ? '1.2em' : '1.7em', fontWeight: 'bold', marginTop: '1em', marginBottom: '3em' }
-const marginBottom1 = { marginBottom: '1em' }
+const isMobile = window.innerWidth <= Responsive.onlyMobile.maxWidth
+const segmentStyle = { marginTop: '0em', padding: '3em 1em' }
+const subHeaderStyle = {
+	fontSize: isMobile ? '1.2em' : '1.7em',
+	fontWeight: 'bold',
+	marginTop: isMobile ? '1em' : '2em',
+	marginBottom: isMobile ? '3em' : '5em',
+}
+const headerStyle = {
+	fontSize: '4em',
+	fontWeight: 'bold',
+	marginBottom: '0.5em',
+	textTransform: 'uppercase'
+}
 
 class ContactCover extends Component {
 	constructor(props) {
@@ -21,7 +30,7 @@ class ContactCover extends Component {
 				<Container >
 					<Header
 						as='h1'
-						content='Minha Cidadania'
+						content='MINHA CIDADANIA'
 						inverted
 						style={ headerStyle }
 					/>
@@ -30,7 +39,7 @@ class ContactCover extends Component {
 						inverted
 						style={ subHeaderStyle }
 					/>
-					<Button as={ Link } to='/contato' animated='fade' color='red' size='huge' style={ marginBottom1 } >
+					<Button as={ Link } to='/contato' animated='fade' color='red' size='huge' >
 						<Button.Content visible>Entre em contato</Button.Content>
 						<Button.Content hidden>
 							<Icon name='phone' />

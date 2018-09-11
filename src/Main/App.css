@@ -41,6 +41,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 }
 
 .segment-image {
-  background: linear-gradient(rgba(27, 27, 27, 1), rgba(27, 27, 27, 0.6)), url('../assets/images/italy2.jpg') !important;
+  background: linear-gradient(rgba(27, 27, 27, 1), rgba(27, 27, 27, 0.6)), url('../assets/images/ItalyCover.jpg') !important;
   background-size: cover !important;
+  min-height: 70vh;
 }

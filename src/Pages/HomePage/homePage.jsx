@@ -15,7 +15,6 @@ class HomePage extends Component {
 			<Container fluid >
 				<HomePageCover />
 				<HomePageContent />
-				<Footer />
 			</Container>
 		)
 	}

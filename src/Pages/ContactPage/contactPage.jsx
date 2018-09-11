@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Container } from 'semantic-ui-react'
 import ContactPageCover from './cover'
-import ContactPageContent from './content'
 
 class ContactPage extends Component {
 	constructor(props) {
@@ -13,7 +12,6 @@ class ContactPage extends Component {
 		return (
 			<Container fluid >
 				<ContactPageCover />
-				<ContactPageContent />
 			</Container>
 		)
 	}
