@@ -15,7 +15,7 @@ export default class Footer extends React.Component {
 		const inverted = location !== '/contato'
 		const containerStyle = {
 			marginTop: '2em',
-			padding: isMobile ? '1em' : '2em',
+			padding: isMobile ? '1em 0.5em' : '2em',
 			backgroundColor: inverted ? darkGrey : white
 		}
 		return (
@@ -30,7 +30,6 @@ export default class Footer extends React.Component {
 export class DesktopFooter extends React.Component {
 	render() {
 		const { isInverted, containerStyle } = this.props
-		console.log(isInverted, containerStyle)
 		return (
 			<Responsive minWidth={Responsive.onlyTablet.minWidth} >
 				<Grid style={containerStyle} stackable >

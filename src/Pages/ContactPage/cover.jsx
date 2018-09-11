@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { Container, Header, Responsive, Segment } from 'semantic-ui-react'
+import { Container, Header, Segment } from 'semantic-ui-react'
 
-const isMobile = window.innerWidth <= Responsive.onlyMobile.maxWidth
 const segmentStyle = { marginTop: '0em', padding: '3em 1em' }
 const headerStyle = {
 	fontSize: '4em',

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Container } from 'semantic-ui-react'
 import HomePageCover from './cover'
 import HomePageContent from './content'
-import Footer from "../../Components/Footer/footer";
 
 class HomePage extends Component {
 	constructor(props) {
