@@ -2,15 +2,12 @@ import React from 'react'
 import { Header, Grid, Responsive } from 'semantic-ui-react'
 import { darkGrey, white } from '../../Utils/defaultColors'
 import Map from '../Map/map'
-import {history} from "../../Utils/history";
+import { history } from '../../Utils/history'
+import { contactHeader, contactAddress, contactCity, contactEmail, contactPhone, contactWhatsApp } from '../../Utils/contactInfo'
 
 const isMobile = window.innerWidth <= Responsive.onlyMobile.maxWidth
-const subHeaderStyle = {
-	marginTop: isMobile ? '1em' : '1.5em',
-	fontSize: '1em',
-	textTransform: 'none'
-}
 const headerStyle = { marginBottom: '1.5em' }
+const subHeaderStyle = { marginTop: isMobile ? '1em' : '1.5em', fontSize: '1em', textTransform: 'none' }
 
 export default class Footer extends React.Component {
 	render() {
@@ -41,11 +38,12 @@ export class DesktopFooter extends React.Component {
 						<Map />
 					</Grid.Column>
 					<Grid.Column  width={ 6 } floated='right' verticalAlign='middle' >
-						<Header as='h1' inverted={ isInverted } content='ONDE ESTAMOS' style={ headerStyle } />
-						<Header sub inverted={ isInverted } content={'RUA GENERAL BITTENCOURT, 386 - CENTRO'} style={ subHeaderStyle } />
-						<Header sub inverted={ isInverted } content={'FLORIANÓPOLIS - SC - BRASIL'} style={ subHeaderStyle } />
-						<Header sub inverted={ isInverted } content={'E-MAIL: minhacidadania.contato@gmail.com'} style={ subHeaderStyle } />
-						<Header sub inverted={ isInverted } content='TEL: (48) 99912-9455' style={ subHeaderStyle } />
+						<Header as='h1' inverted={ isInverted } content={contactHeader} style={ headerStyle } />
+						<Header sub inverted={ isInverted } content={contactAddress} style={ subHeaderStyle } />
+						<Header sub inverted={ isInverted } content={contactCity} style={ subHeaderStyle } />
+						<Header sub inverted={ isInverted } content={contactEmail} style={ subHeaderStyle } />
+						<Header sub inverted={ isInverted } content={contactPhone} style={ subHeaderStyle } />
+						<Header sub inverted={ isInverted } content={contactWhatsApp} style={ subHeaderStyle } />
 					</Grid.Column>
 				</Grid>
 			</Responsive>
@@ -60,11 +58,12 @@ export class MobileFooter extends React.Component {
 			<Responsive maxWidth={Responsive.onlyMobile.maxWidth} >
 				<Grid columns={ 2 }  stackable style={ containerStyle }  >
 					<Grid.Column floated='right' verticalAlign='middle' >
-						<Header as='h1' inverted={ isInverted } content={'ONDE ESTAMOS'} textAlign='center' style={ headerStyle } />
-						<Header sub inverted={ isInverted } content={'Rua General Bittencourt, 386 - Centro'} style={ subHeaderStyle } />
-						<Header sub inverted={ isInverted } content={'Florianópolis - SC - Brasil'} style={ subHeaderStyle } />
-						<Header sub inverted={ isInverted } content='TEL: (48) 99912-9455' style={ subHeaderStyle } />
-						<Header sub inverted={ isInverted } content={'E-MAIL: minhacidadania.contato@gmail.com'} style={ subHeaderStyle } />
+						<Header as='h1' inverted={ isInverted } content={contactHeader} textAlign='center' style={ headerStyle } />
+						<Header sub inverted={ isInverted } content={contactAddress} style={ subHeaderStyle } />
+						<Header sub inverted={ isInverted } content={contactCity} style={ subHeaderStyle } />
+						<Header sub inverted={ isInverted } content={contactEmail} style={ subHeaderStyle } />
+						<Header sub inverted={ isInverted } content={contactPhone} style={ subHeaderStyle } />
+						<Header sub inverted={ isInverted } content={contactWhatsApp} style={ subHeaderStyle } />
 					</Grid.Column>
 					<Grid.Column floated='left' style={{ marginLeft: '7em' }} >
 						<Map />

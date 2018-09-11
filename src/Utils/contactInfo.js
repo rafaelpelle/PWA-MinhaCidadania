@@ -1,0 +1,6 @@
+export const contactHeader = 'ONDE ESTAMOS'
+export const contactAddress = 'RUA GENERAL BITTENCOURT, 386 - CENTRO'
+export const contactCity = 'FLORIANÓPOLIS - SC - BRASIL'
+export const contactEmail = 'E-MAIL: minhacidadania.contato@gmail.com'
+export const contactPhone = 'FONE: +55 (48) 99961-7434'
+export const contactWhatsApp = 'WHATSAPP: +55 (48) 99912-9455'
